@@ -189,10 +189,93 @@
             font-weight: 600;
             margin-bottom: 8px;
         }
+
         
         .format-type {
             color: var(--text-secondary);
             font-size: 14px;
+        }
+
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 30px;
+		margin-top: 30px;
+	}
+
+	.testimonial {
+		padding: 28px;
+		background: var(--bg-secondary);
+		border-radius: 8px;
+		border: 1px solid var(--border);
+	}
+
+	.testimonial-header {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 20px;
+	}
+
+	.testimonial-photo {
+		width: 60px;
+		height: 60px;
+		border-radius: 8px;
+		object-fit: cover;
+	}
+
+	.testimonial-info h4 {
+		color: var(--text-primary);
+		font-size: 16px;
+		margin-bottom: 6px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+        }
+	.testimonial-info h4 a {
+		color: #ffffff;
+	}
+        
+        .linkedin-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .linkedin-icon:hover {
+            opacity: 1;
+        }
+        
+        .testimonial-title {
+            color: var(--text-secondary);
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        .testimonial-text {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        .testimonial-event {
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-style: italic;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .testimonial-event a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .testimonial-event a:hover {
+            color: var(--accent-dim);
         }
 
 	.top-cta {
@@ -290,6 +373,34 @@
                 <span class="tech-tag">Network Architecture</span>
             </div>
         </section>
+
+	<section class="section">
+            <h2>What Participants Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-header">
+                        <img src="participant-thridev.jpeg" alt="Thridev Madyahanapu" class="testimonial-photo">
+                        <div class="testimonial-info">
+                            <h4>
+                                Thridev Madyahanapu
+                                <a href="https://www.linkedin.com/in/thridev-m/" target="_blank" rel="noopener noreferrer">
+                                    <svg class="linkedin-icon" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                                    </svg>
+                                </a>
+                            </h4>
+                            <div class="testimonial-title">Senior Software Engineer at Mbanq</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        The workshop was one of the most practical deep dives into card authorization flows I've attended. It bridges the gap of viewing the authorization stream from one end to seeing the full end-to-end card flow implementation in action. Its a must attend for anyone building payment infrastructure.
+                    </p>
+                    <div class="testimonial-event">
+                        Participant of <a href="https://www.youtube.com/watch?v=gBFg-t8wLjc" target="_blank" rel="noopener noreferrer">Workshop at Fintech Devcon 2025</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <section class="section">
             <div class="bio">
@@ -315,6 +426,7 @@
                 </div>
             </div>
         </section>
+
         
         <section class="bottom-cta">
             <h2>Ready to Level Up Your Engineering Team?</h2>
